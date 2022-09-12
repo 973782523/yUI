@@ -1,12 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 @Component({
-    selector: 'yl-menu-view',
-    templateUrl: './yl-menu-view.component.html',
-    styleUrls: ['./yl-menu-view.component.css']
+    selector: 'yl-menu-scroll',
+    templateUrl: './yl-menu-scroll.component.html',
+    styleUrls: ['./yl-menu-scroll.component.css']
 })
-export class YlMenuViewComponent implements OnInit {
-    str = `
 export class YlMenuScrollComponent implements OnInit, OnDestroy {
     @ViewChild('menuScroll') menuScroll!: ElementRef;
     scrollListener: any;
@@ -42,23 +40,4 @@ export class YlMenuScrollComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.unbindScrollListener();
     }
-}
-    `;
-    css = `
-  .aaa{
-            background-color: #880101!important;
-            backdrop-filter: blur(12px);
-      }
-    `;
-    html1 = `
-     <div style="height: 32px;background-color: khaki;" #menuScroll></div>
-     <div style="height: 50vh;"></div>
-    `;
-
-    constructor() {
-    }
-
-    ngOnInit(): void {
-    }
-
 }

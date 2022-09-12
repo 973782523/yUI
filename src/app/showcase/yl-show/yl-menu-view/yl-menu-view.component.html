@@ -1,1 +1,27 @@
+<h5>点击按钮,下拉框</h5>
 <yl-menu></yl-menu>
+<p style="margin-top:100px;">主要是给全局添加点击事件, 用法比较奇特可以学习下</p>
+<hr>
+<yl-menu-scroll></yl-menu-scroll>
+<h5>滚动的时候超过0添加class</h5>
+<p-tabView>
+    <p-tabPanel header="TS">
+        <app-code lang="typescript"  ngPreserveWhitespaces>
+            {{str}}
+        </app-code>
+    </p-tabPanel>
+    <p-tabPanel header="html">
+        <app-code lang="markup"   ngPreserveWhitespaces>
+            {{html1}}
+<!--<div style="height: 32px;background-color: khaki;" #menuScroll></div>-->
+<!--<div style="height: 50vh;"></div>-->
+        </app-code>
+    </p-tabPanel>
+    <p-tabPanel header="CSS">
+        <app-code lang="css"  ngPreserveWhitespaces>
+          {{css}}
+        </app-code>
+    </p-tabPanel>
+</p-tabView>
+
+
